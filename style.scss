@@ -1,5 +1,15 @@
 /** @format */
 
+$accent_color: #ee4343;
+@mixin iconSize {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+@function pxToEm($size_px, $font_size) {
+  @return $size_px/$font_size + 0em;
+}
+
 #wrapper {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -9,32 +19,34 @@
   height: 30px;
 }
 
-.side-menu a {
-  display: inline-block;
-  text-decoration: none;
-  color: #606060;
-  padding: 15px;
-  font-size: 20px;
-
-  width: 100%;
-  box-sizing: border-box;
-}
-
 .side-menu {
   width: 240px;
-}
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #606060;
+    padding: pxToEm(15, 20);
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
 
-.side-menu i {
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  text-align: center;
-}
-.side-menu span {
-  margin-left: 26px;
-}
+    &:hover {
+      color: $accent_color;
+      background: rgba(94, 94, 94, 0.459);
+    }
+  }
 
-.side-menu a:hover {
-  color: #ee4343;
-  background: rgba(94, 94, 94, 0.459);
+  &__link {
+    font-weight: bold;
+  }
+
+  i {
+    display: inline-block;
+    @include iconSize;
+    text-align: center;
+  }
+
+  span {
+    margin-left: 26px;
+  }
 }
