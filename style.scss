@@ -1,0 +1,40 @@
+/** @format */
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+.top-menu {
+  height: 30px;
+}
+
+.side-menu a {
+  display: inline-block;
+  text-decoration: none;
+  color: #606060;
+  padding: 15px;
+  font-size: 20px;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.side-menu {
+  width: 240px;
+}
+
+.side-menu i {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+}
+.side-menu span {
+  margin-left: 26px;
+}
+
+.side-menu a:hover {
+  color: #ee4343;
+  background: rgba(94, 94, 94, 0.459);
+}
