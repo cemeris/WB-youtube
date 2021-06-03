@@ -10,17 +10,31 @@ $accent_color: #ee4343;
   @return $size_px/$font_size + 0em;
 }
 
+body {
+  background: #f1f1f1;
+  margin: 0;
+}
+
 #wrapper {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 240px 1fr;
+  box-sizing: border-box;
+  padding-top: 56px;
+  min-height: 100vh;
 }
 
 .top-menu {
-  height: 30px;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .side-menu {
-  width: 240px;
+  background: #fff;
   a {
     display: inline-block;
     text-decoration: none;
@@ -49,4 +63,11 @@ $accent_color: #ee4343;
   span {
     margin-left: 26px;
   }
+}
+
+.cover-img {
+  height: 196px;
+  background: url(media/rohit-tandon-9wg5jCEPBsw-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
 }
