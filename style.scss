@@ -15,6 +15,9 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
 #wrapper {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -70,4 +73,13 @@ body {
   background: url(media/rohit-tandon-9wg5jCEPBsw-unsplash.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.profile {
+  &__image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
 }
