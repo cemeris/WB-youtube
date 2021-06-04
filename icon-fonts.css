@@ -28,6 +28,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow {
+  transform: rotate(90deg);
+}
 .icon-subscription:before {
   content: "\e900";
 }
