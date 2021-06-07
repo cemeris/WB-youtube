@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <title>WB - youtube</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="icon-fonts.css">
 <link rel="stylesheet" href="style.css">
 
 <div class="top-menu">
-    <a href="#" class="toggle">
+    <a href="#" onclick="document.querySelector('.side-menu').classList.toggle('visible')">
         <svg
           col
           width="18"
@@ -34,10 +35,10 @@
         </a>
         <a href="#">
           <i>
-          <svg class="icon-arrow" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.41 0L0 1.41L4.58 6L0 10.59L1.41 12L7.41 6L1.41 0Z" fill="#606060"/>
-          </svg>
-        </i>
+            <svg class="icon-arrow" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.41 0L0 1.41L4.58 6L0 10.59L1.41 12L7.41 6L1.41 0Z" fill="#606060"/>
+            </svg>
+          </i>
           <span>Trending</span>
         </a>
         <hr />
@@ -45,10 +46,12 @@
     <main>
         <div class="cover-img"></div>
         <div class="profile">
-          <div>
+          <div class="profile__header">
             <img class="profile__image" src="media/avatar.jpg" alt="">
-            <h2>Profile</h2>
-            <span>23.9 M subscribers</span>
+            <div>
+              <h2>Profile</h2>
+              <span>23.9 M subscribers</span>
+            </div>
             <button>subscripe</button>
           </div>
           <nav>
@@ -68,6 +71,16 @@
               </svg>
               </a>
           </nav>
+        </div>
+
+        <div class="preview">
+          <iframe src="https://www.youtube-nocookie.com/embed/zVs6rrKftzI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+          <div class="preview__textblock">
+            <h4>Lorem Ipsum is simply dummy text</h4>
+            <span>12 views</span> • <span>1 month ago</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
+          </div>
         </div>
     </main>
 </div>
